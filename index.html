@@ -39,66 +39,64 @@
           </p>
         </div>
 
-        <article class="project-card">
-          <div class="project-header">
-            <div>
-              <p class="project-kicker">VS Code Extension</p>
-              <h3>AVR ASM Navigator</h3>
+        <div class="project-gallery">
+          <a
+            class="project-link-card"
+            href="https://github.com/garyPenhook/avr-asm-navigator"
+          >
+            <div class="project-header">
+              <div>
+                <p class="project-kicker">VS Code Extension</p>
+                <h3>AVR ASM Navigator</h3>
+              </div>
+              <p class="project-version">v0.1.6</p>
             </div>
-            <p class="project-version">Current package: v0.1.6</p>
-          </div>
 
-          <p class="project-summary">
-            AVR ASM Navigator is a local Visual Studio Code extension for
-            Microchip AVR assembly projects. It adds symbol-aware navigation and
-            completion features to `.S` and `.s` files, tuned for MPLAB XC8 AVR
-            workflows and Microchip device-family packs.
-          </p>
-
-          <div class="project-grid">
-            <section class="detail-panel">
-              <h4>What it does</h4>
-              <ul>
-                <li>Provides hover details for local labels, `.equ` symbols, and DFP-resolved device symbols.</li>
-                <li>Supports go-to-definition, document symbols, workspace symbols, and cross-workspace references.</li>
-                <li>Offers completion for local symbols, AVR instructions, and active-target pack symbols.</li>
-                <li>Includes commands for symbol lookup and active-target inspection inside VS Code.</li>
-              </ul>
-            </section>
-
-            <section class="detail-panel">
-              <h4>Why it matters</h4>
-              <ul>
-                <li>Reduces friction when working in AVR assembly-heavy codebases.</li>
-                <li>Leans on Microchip MPLAB project metadata when available for stronger device auto-detection.</li>
-                <li>Uses installed AVR DFP packs to surface target-specific symbols where developers actually need them.</li>
-                <li>Fits the workflow of developers who want better editor assistance without replacing the Microchip toolchain.</li>
-              </ul>
-            </section>
-          </div>
-
-          <div class="project-notes">
-            <p>
-              The repository includes VSIX packaging, local checks, and tag-based
-              release automation in GitHub Actions for repeatable distribution.
+            <p class="project-summary">
+              Symbol-aware navigation and completion for Microchip AVR assembly
+              projects in Visual Studio Code, tuned for MPLAB XC8 and DFP-based
+              workflows.
             </p>
-          </div>
 
-          <div class="hero-actions">
-            <a
-              class="button button-primary"
-              href="https://github.com/garyPenhook/avr-asm-navigator"
-            >
-              Open Repository
-            </a>
-            <a
-              class="button button-secondary"
-              href="https://github.com/garyPenhook/avr-asm-navigator/releases"
-            >
-              View Releases
-            </a>
-          </div>
-        </article>
+            <div class="tag-row">
+              <span class="tag">Hover + Definitions</span>
+              <span class="tag">DFP Integration</span>
+              <span class="tag">Workspace Symbols</span>
+              <span class="tag">VSIX Releases</span>
+            </div>
+
+            <div class="project-grid">
+              <section class="detail-panel">
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Supports local labels, `.equ/.set` symbols, and target-device pack symbols.</li>
+                  <li>Provides go-to-definition, references, outline symbols, and workspace symbol lookup.</li>
+                  <li>Includes AVR mnemonic and symbol completion inside `.S` and `.s` files.</li>
+                </ul>
+              </section>
+
+              <section class="detail-panel">
+                <h4>Development Focus</h4>
+                <ul>
+                  <li>Designed for Microchip MPLAB project metadata and installed AVR DFP packs.</li>
+                  <li>Packaged as a VSIX with local checks and tag-based release automation.</li>
+                  <li>Built to improve editor productivity without replacing the Microchip build toolchain.</li>
+                </ul>
+              </section>
+            </div>
+
+            <p class="project-cta">Open project repository</p>
+          </a>
+
+          <article class="project-card project-card-placeholder">
+            <p class="project-kicker">More Projects</p>
+            <h3>Additional AVR work can be added here</h3>
+            <p class="project-summary">
+              This section is now structured for multiple project cards, so new
+              Microchip AVR projects can be added as separate clickable entries.
+            </p>
+          </article>
+        </div>
       </section>
     </main>
   </body>
