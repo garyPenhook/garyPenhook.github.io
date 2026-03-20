@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { avrProjects } from "../../data/projects";
+
+export function getStaticPaths() {
+  return avrProjects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+---
+
+<BaseLayout
+  title={`${project.title} | garyPenhook`}
+  description={project.summary}
+>
+  <main class="page">
+    <a class="back-link" href="/#microchip-avr-projects">Back to AVR Projects</a>
+
+    <section class="hero project-hero">
+      <p class="eyebrow">{project.category}</p>
+      <div class="project-hero-header">
+        <h1 class="project-page-title">{project.title}</h1>
+        <p class="project-version">{project.version}</p>
+      </div>
+      <p class="lead">{project.summary}</p>
+      <div class="tag-row">
+        {project.tags.map((tag) => <span class="tag">{tag}</span>)}
+      </div>
+      <div class="hero-actions">
+        <a class="button button-primary" href={project.repositoryUrl}>
+          Repository
+        </a>
+        <a class="button button-secondary" href={project.releasesUrl}>
+          Releases
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Overview</p>
+        <h2>Project Context</h2>
+      </div>
+
+      <article class="project-card prose-card">
+        {project.overview.map((paragraph) => <p>{paragraph}</p>)}
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="project-grid">
+        <section class="detail-panel">
+          <h4>Highlights</h4>
+          <ul>
+            {project.highlights.map((item) => <li>{item}</li>)}
+          </ul>
+        </section>
+
+        <section class="detail-panel">
+          <h4>Development Focus</h4>
+          <ul>
+            {project.focus.map((item) => <li>{item}</li>)}
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

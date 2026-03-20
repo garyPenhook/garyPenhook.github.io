@@ -12,7 +12,11 @@ const { project } = Astro.props;
   <div class="project-header">
     <div>
       <p class="project-kicker">{project.category}</p>
-      <h3>{project.title}</h3>
+      <h3>
+        <a class="project-title-link" href={`/projects/${project.slug}/`}>
+          {project.title}
+        </a>
+      </h3>
     </div>
     <p class="project-version">{project.version}</p>
   </div>
@@ -40,6 +44,9 @@ const { project } = Astro.props;
   </div>
 
   <div class="project-actions">
+    <a class="button button-secondary" href={`/projects/${project.slug}/`}>
+      Project Page
+    </a>
     <a class="button button-primary" href={project.repositoryUrl}>Repository</a>
     <a class="button button-secondary" href={project.releasesUrl}>Releases</a>
   </div>
