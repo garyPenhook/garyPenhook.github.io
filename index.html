@@ -5,25 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Personal website for garyPenhook, published with GitHub Pages."
+      content="garyPenhook builds practical software and tooling for Microchip AVR development workflows."
     />
     <title>garyPenhook</title>
     <link rel="stylesheet" href="assets/css/site.css" />
   </head>
   <body>
-    <main class="shell">
-      <section class="card">
+    <main class="page">
+      <section class="hero">
         <p class="eyebrow">garyPenhook.github.io</p>
-        <h1>Python-minded builder, now on GitHub Pages.</h1>
+        <h1>Practical tooling for embedded and low-level development.</h1>
         <p class="lead">
-          This is a static site ready for GitHub Pages hosting. Edit this file
-          and the stylesheet to turn it into your public homepage.
+          I build focused software for real workflows, with an emphasis on
+          Microchip AVR development, editor integration, and maintainable tooling.
         </p>
-        <div class="stack">
-          <p>Start with <code>index.html</code> for content.</p>
-          <p>Use <code>assets/css/site.css</code> for layout, color, and typography.</p>
-          <p>Push changes to the <code>main</code> branch and Pages will republish automatically.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/garyPenhook">
+            View GitHub
+          </a>
+          <a class="button button-secondary" href="#microchip-avr-projects">
+            Explore AVR Projects
+          </a>
         </div>
+      </section>
+
+      <section class="section" id="microchip-avr-projects">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Microchip AVR Projects</h2>
+          <p>
+            A focused set of projects around AVR assembly workflows, device
+            packs, and developer productivity.
+          </p>
+        </div>
+
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <p class="project-kicker">VS Code Extension</p>
+              <h3>AVR ASM Navigator</h3>
+            </div>
+            <p class="project-version">Current package: v0.1.6</p>
+          </div>
+
+          <p class="project-summary">
+            AVR ASM Navigator is a local Visual Studio Code extension for
+            Microchip AVR assembly projects. It adds symbol-aware navigation and
+            completion features to `.S` and `.s` files, tuned for MPLAB XC8 AVR
+            workflows and Microchip device-family packs.
+          </p>
+
+          <div class="project-grid">
+            <section class="detail-panel">
+              <h4>What it does</h4>
+              <ul>
+                <li>Provides hover details for local labels, `.equ` symbols, and DFP-resolved device symbols.</li>
+                <li>Supports go-to-definition, document symbols, workspace symbols, and cross-workspace references.</li>
+                <li>Offers completion for local symbols, AVR instructions, and active-target pack symbols.</li>
+                <li>Includes commands for symbol lookup and active-target inspection inside VS Code.</li>
+              </ul>
+            </section>
+
+            <section class="detail-panel">
+              <h4>Why it matters</h4>
+              <ul>
+                <li>Reduces friction when working in AVR assembly-heavy codebases.</li>
+                <li>Leans on Microchip MPLAB project metadata when available for stronger device auto-detection.</li>
+                <li>Uses installed AVR DFP packs to surface target-specific symbols where developers actually need them.</li>
+                <li>Fits the workflow of developers who want better editor assistance without replacing the Microchip toolchain.</li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="project-notes">
+            <p>
+              The repository includes VSIX packaging, local checks, and tag-based
+              release automation in GitHub Actions for repeatable distribution.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a
+              class="button button-primary"
+              href="https://github.com/garyPenhook/avr-asm-navigator"
+            >
+              Open Repository
+            </a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/garyPenhook/avr-asm-navigator/releases"
+            >
+              View Releases
+            </a>
+          </div>
+        </article>
       </section>
     </main>
   </body>
