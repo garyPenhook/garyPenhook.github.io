@@ -116,7 +116,6 @@ h4 {
 .lead,
 .section-heading p,
 .project-summary,
-.project-notes p,
 li {
   color: var(--muted);
   font-size: 1.04rem;
@@ -129,7 +128,8 @@ li {
   font-size: 1.18rem;
 }
 
-.hero-actions {
+.hero-actions,
+.project-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
@@ -233,35 +233,8 @@ li + li {
   margin-top: 0.55rem;
 }
 
-.project-notes {
-  margin-top: 1rem;
-  padding: 1rem 1.2rem;
-  border-left: 3px solid var(--accent);
-  background: rgba(14, 107, 92, 0.06);
-  border-radius: 0 18px 18px 0;
-}
-
-.project-cta {
-  margin: 1.4rem 0 0;
-  color: var(--accent-dark);
-  font-weight: 700;
-}
-
-.project-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem;
-  margin-top: 1.4rem;
-}
-
 .project-card-placeholder {
   background: rgba(255, 249, 240, 0.58);
-}
-
-code {
-  padding: 0.14rem 0.35rem;
-  border-radius: 0.4rem;
-  background: rgba(14, 107, 92, 0.08);
 }
 
 @media (max-width: 820px) {

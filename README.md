@@ -1,12 +1,20 @@
 # garyPenhook.github.io
 
-Static GitHub Pages site for the `garyPenhook` account.
+Astro-based GitHub Pages site for the `garyPenhook` account.
 
-## Local preview
+## Development
 
 ```bash
 cd /home/gary/apps/garyPenhook.github.io
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then open `http://localhost:8000`.
+## Build for GitHub Pages
+
+```bash
+npm run build
+```
+
+The generated static site is written to `docs/` so GitHub Pages can serve it
+from the `main` branch.
